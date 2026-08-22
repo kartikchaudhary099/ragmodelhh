@@ -1,0 +1,222 @@
+[
+  {
+    "id": "doc_hh_goa_01",
+    "title": "HH Goa 2026 Summit Overview",
+    "language": "en",
+    "text": "HH Goa 2026 is a premier tech innovation event held in Goa, India. Task 2 focuses on Multilingual Voice RAG over large-scale document corpora. ThinkZen is designed to provide voice-native, evidence-grounded answers in Hindi, English, and Hinglish with real-time latency analytics.",
+    "metadata": {
+      "source": "HH Goa 2026 Official Guide",
+      "category": "Competition Overview",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hh_goa_02",
+    "title": "ThinkZen Architecture and Retrieval System",
+    "language": "en",
+    "text": "ThinkZen utilizes a hybrid retrieval architecture combining dense vector embeddings (BGE-M3) with sparse lexical BM25 search. The system applies min-max score normalization and weighted fusion controlled by an alpha parameter. Top candidates undergo optional candidate reranking before grounded generation.",
+    "metadata": {
+      "source": "ThinkZen Technical Specification",
+      "category": "Architecture",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hi_01",
+    "title": "वाणीरैग बहुभाषी वॉइस सेवा निर्देश",
+    "language": "hi",
+    "text": "वाणीरैग (ThinkZen) एक बहुभाषी वॉइस-आधारित RAG प्रणाली है जो हिंदी और अंग्रेजी दोनों भाषाओं में प्रश्नों के सटीक और साक्ष्य-आधारित उत्तर प्रदान करती है। जब साक्ष्य अपर्याप्त होता है, तो यह प्रणाली बिना किसी भ्रम (hallucination) के स्पष्ट रूप से इंकार (refusal) कर देती है।",
+    "metadata": {
+      "source": "ThinkZen Hindi Manual",
+      "category": "Multilingual Guidelines",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hi_02",
+    "title": "गोवा 2026 डिजिटल पहल और नीति",
+    "language": "hi",
+    "text": "गोवा 2026 डिजिटल समिट में भारतीय भाषाओं में कृत्रिम बुद्धिमत्ता (AI) के उपयोग पर विशेष ध्यान दिया गया है। वाणीरैग जैसी तकनीकें सरकारी सेवाओं और दस्तावेज़ खोज को आम नागरिकों के लिए वॉइस कमांड द्वारा सुलभ बनाती हैं।",
+    "metadata": {
+      "source": "Goa Digital Initiatives Report",
+      "category": "Policy",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hinglish_01",
+    "title": "Voice RAG Ingestion and Hybrid Fusion Policy",
+    "language": "hi-en",
+    "text": "ThinkZen mein hybrid search ka use hota hai jisme dense embeddings and BM25 sparse index milkar best evidence standard calculate karte hain. P50 aur P70 latency timing real-time judge mode dashboard par visible hoti hai.",
+    "metadata": {
+      "source": "Hinglish Tech Briefing",
+      "category": "Hybrid Search",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_01",
+    "title": "Retrieval-Augmented Generation — Core Concepts",
+    "language": "en",
+    "text": "Retrieval-Augmented Generation (RAG) is an AI architecture that combines a retrieval system with a language model. Instead of relying solely on parametric knowledge stored in model weights, RAG retrieves relevant document passages at inference time and uses them as grounded context for the generator. This reduces hallucination and improves factual accuracy.",
+    "metadata": {
+      "source": "RAG Architecture Primer",
+      "category": "RAG Concepts",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_02",
+    "title": "Dense vs Sparse Retrieval: A Comparison",
+    "language": "en",
+    "text": "Dense retrieval uses neural embedding models to encode queries and documents into high-dimensional vectors, finding semantically similar content. Sparse retrieval (e.g., BM25) uses token frequency statistics, excelling at exact term matching. Hybrid retrieval combines both approaches using a weighted fusion parameter (alpha), typically achieving better recall than either method alone.",
+    "metadata": {
+      "source": "Information Retrieval Handbook",
+      "category": "Retrieval Methods",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_03",
+    "title": "Chunking Strategies for RAG Systems",
+    "language": "en",
+    "text": "Chunking splits large documents into smaller passages for indexing. Fixed-size chunking splits by character or token count with configurable overlap. Sentence-boundary chunking preserves linguistic units. Parent-child chunking creates a two-level hierarchy: large parent chunks for context retrieval and small child chunks for precise answer extraction. Chunk metadata (doc_id, language, strategy) enables provenance tracking.",
+    "metadata": {
+      "source": "RAG Engineering Guide",
+      "category": "Chunking",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_04",
+    "title": "Reranking in RAG Pipelines",
+    "language": "en",
+    "text": "Reranking is a post-retrieval step that re-orders retrieved candidate passages for relevance to the query. Cross-encoder models like FlashRank (ms-marco-TinyBERT) score each query-passage pair jointly, producing more accurate relevance judgments than bi-encoder retrieval alone. Reranking typically runs on the top-K candidates (e.g., K=5 to 20) to control latency.",
+    "metadata": {
+      "source": "ThinkZen Reranking Spec",
+      "category": "Reranking",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_05",
+    "title": "Grounding and Hallucination Prevention",
+    "language": "en",
+    "text": "Hallucination occurs when an LLM generates factually incorrect content not supported by evidence. ThinkZen prevents hallucination through evidence-first generation: the generator receives only scored, retrieved passages as context. If the top retrieval score falls below the confidence threshold, the system refuses to answer rather than fabricating a response. All generated answers include source citations.",
+    "metadata": {
+      "source": "ThinkZen Grounding Policy",
+      "category": "Grounding",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_rag_en_06",
+    "title": "BM25 Scoring Algorithm",
+    "language": "en",
+    "text": "BM25 (Best Match 25) is a probabilistic ranking function for sparse document retrieval. It computes a relevance score based on term frequency (TF), inverse document frequency (IDF), and document length normalization. The parameters k1 (typically 1.5) controls term frequency saturation, and b (typically 0.75) controls length normalization. BM25 is the standard baseline for sparse retrieval benchmarks.",
+    "metadata": {
+      "source": "BM25 Technical Reference",
+      "category": "Sparse Retrieval",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hi_03",
+    "title": "भारत में आर्टिफिशियल इंटेलिजेंस नीति",
+    "language": "hi",
+    "text": "भारत सरकार ने 2023 में 'IndiaAI' मिशन की घोषणा की है जिसका लक्ष्य भारतीय भाषाओं में AI अनुप्रयोगों का विकास करना है। इसमें हिंदी, तमिल, तेलुगु, और अन्य क्षेत्रीय भाषाओं में वॉइस और टेक्स्ट इंटरफेस शामिल हैं।",
+    "metadata": {
+      "source": "IndiaAI Mission Report",
+      "category": "India AI Policy",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hi_04",
+    "title": "हिंदी में रिट्रीवल-ऑगमेंटेड जेनरेशन",
+    "language": "hi",
+    "text": "RAG (Retrieval-Augmented Generation) प्रणाली में तीन मुख्य चरण होते हैं: पहला, दस्तावेज़ पुनः प्राप्ति (Retrieval); दूसरा, साक्ष्य चयन (Evidence Selection); और तीसरा, उत्तर निर्माण (Answer Generation)। वाणीरैग इस पाइपलाइन को बहुभाषी कॉर्पस पर लागू करती है।",
+    "metadata": {
+      "source": "ThinkZen Hindi Technical Guide",
+      "category": "RAG Concepts",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hi_05",
+    "title": "वेक्टर डेटाबेस और एम्बेडिंग",
+    "language": "hi",
+    "text": "वेक्टर डेटाबेस (जैसे Qdrant, Pinecone) उच्च-आयामी वेक्टर को कुशलतापूर्वक संग्रहीत और खोजने में सक्षम होते हैं। BGE-M3 जैसे मल्टीलिंगुअल एम्बेडिंग मॉडल हिंदी और अंग्रेजी दोनों के लिए सिमैंटिक वेक्टर उत्पन्न करते हैं।",
+    "metadata": {
+      "source": "Vector DB Hindi Overview",
+      "category": "Embeddings",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hinglish_02",
+    "title": "Query Analysis aur Adaptive Retrieval",
+    "language": "hi-en",
+    "text": "ThinkZen ka Query Analyzer har query ko classify karta hai: factual, descriptive, comparison, ya navigational. Factual queries ke liye alpha=0.70 (dense-heavy) use hota hai, jabki comparison queries ke liye sparse retrieval ko zyada weight milta hai (alpha=0.35). Is tarah adaptive retrieval query ke type ke hisaab se optimize hota hai.",
+    "metadata": {
+      "source": "ThinkZen Adaptive Retrieval Guide",
+      "category": "Query Analysis",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_hinglish_03",
+    "title": "Judge Mode aur Latency Analytics",
+    "language": "hi-en",
+    "text": "Judge Mode mein pura pipeline trace visible hota hai: query analysis, retrieval candidates, reranked evidence, aur final answer. Har request ke liye retrieval_latency_ms, rerank_latency_ms, aur generation_latency_ms measure kiye jaate hain. Multi-run ke baad P50, P70, aur P100 latency percentiles calculate kiye ja sakte hain.",
+    "metadata": {
+      "source": "ThinkZen Judge Mode Documentation",
+      "category": "Observability",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_en_stt_01",
+    "title": "Speech-to-Text for Multilingual RAG",
+    "language": "en",
+    "text": "Speech-to-Text (STT) converts audio input to text transcript. For Indian languages, Sarvam AI provides specialized models supporting Hindi, Tamil, Telugu, Kannada, Bengali, and other regional languages. The Web Speech API (browser-native) supports English and Hindi in modern browsers. Backend STT enables server-side transcription for non-browser clients.",
+    "metadata": {
+      "source": "ThinkZen STT Integration Guide",
+      "category": "Voice",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_en_latency_01",
+    "title": "Latency Measurement in RAG Pipelines",
+    "language": "en",
+    "text": "Production RAG systems measure end-to-end latency across pipeline stages: STT transcription, query analysis, vector retrieval, reranking, and LLM generation. P50 latency represents the median request time, P70 the 70th percentile, and P100 the maximum observed. ThinkZen measures all stage latencies per request and reports them in the telemetry object.",
+    "metadata": {
+      "source": "Latency Engineering Reference",
+      "category": "Observability",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_en_msmarco_01",
+    "title": "MSMARCO-XI Dataset for Multilingual RAG",
+    "language": "en",
+    "text": "MSMARCO-XI (ai4bharat/MSMARCO-XI) is a multilingual extension of the Microsoft MSMARCO question-answering dataset. The Hindi shard (train/hintrain.parquet) contains approximately 3.7GB of Hindi QA pairs with passage retrieval annotations. Fields include: query, Answer, query_id, query_type, passages, source_lang, target_lang, Eng_Query, and Eng_Answer.",
+    "metadata": {
+      "source": "MSMARCO-XI Dataset Card",
+      "category": "Dataset",
+      "year": 2026
+    }
+  },
+  {
+    "id": "doc_en_goa_01",
+    "title": "Goa as a Tech Hub — HH Goa 2026",
+    "language": "en",
+    "text": "Goa is increasingly recognized as a tech and innovation hub in India. The HH Goa 2026 event brings together AI researchers, engineers, and founders to showcase cutting-edge systems. Task 2 of HH Goa 2026 specifically challenges teams to build production-grade multilingual RAG systems capable of voice input, large-corpus retrieval, and evidence-grounded generation.",
+    "metadata": {
+      "source": "HH Goa 2026 Event Brochure",
+      "category": "Competition Overview",
+      "year": 2026
+    }
+  }
+]

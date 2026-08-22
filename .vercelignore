@@ -1,0 +1,22 @@
+# Never upload secrets or local virtualenvs to the deployment.
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Byte-caches / local artifacts.
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Not used at runtime — keep the serverless function small.
+# (backend/, frontend/, data/ and api/ are intentionally NOT ignored.)
+tests/
+docs/
+scripts/
+none/
+*.md
+run_checks.bat
+pytest.ini
+Dockerfile

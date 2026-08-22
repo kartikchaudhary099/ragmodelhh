@@ -1,0 +1,79 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+none/
+
+# Generated evaluation artifacts (from scripts/run_eval.py)
+eval_results/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large files — keep structure, ignore contents)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/samples/.gitkeep
+
+# Official MSMARCO-XI subset (built locally via scripts/build_msmarco_xi_sample.py).
+# Real dataset content must NOT be committed — keep only the structure + docs.
+data/official/*
+!data/official/.gitkeep
+!data/official/README.md
+
+# Logs
+*.log
+logs/
+
+# Frontend (future)
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+
+# Vector DB / model caches (future)
+*.index
+*.faiss
+.cache/
+models/

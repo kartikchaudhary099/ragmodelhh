@@ -1,0 +1,57 @@
+# Keep the build context small and never ship secrets or local-only artifacts.
+# NOTE: frontend/ and data/samples/ are intentionally NOT ignored — both are
+# required at runtime (SPA mount + demo corpus seeding).
+
+# Secrets & envs
+.env
+.env.local
+.env.*.local
+
+# Virtualenvs (the Windows .venv is ~158M and must never enter the image)
+.venv/
+venv/
+ENV/
+
+# Version control & CI
+.git/
+.gitignore
+.github/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+none/
+.coverage
+htmlcov/
+
+# Tests and dev-only requirements (prod image runs the app, not the suite)
+tests/
+backend/requirements-dev.txt
+
+# Generated / local-only data (demo corpus in data/samples IS kept)
+data/raw/*
+data/processed/*
+eval_results/
+*.log
+logs/
+
+# Editor / OS cruft
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Model / index caches
+*.index
+*.faiss
+.cache/
+models/
+
+# Project docs & scratch not needed inside the runtime image
+*.md
+scripts/__pycache__/

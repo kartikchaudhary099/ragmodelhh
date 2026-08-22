@@ -1,0 +1,2 @@
+# do not remove — keeps the empty data/official/ directory in git.
+# Built dataset content (msmarco_xi_sample.json, provenance.json) is git-ignored.

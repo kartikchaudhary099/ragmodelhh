@@ -1,0 +1,19 @@
+# ThinkZen backend — production dependencies
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.32.0,<1.0.0
+pydantic-settings>=2.6.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+# HTTP client for the server-side Sarvam STT call in app/api/routes/stt.py.
+# Only exercised when SARVAM_API_KEY is set; the core RAG path never imports it,
+# so the default run stays dependency-free. Required in prod for /api/v1/stt to work.
+httpx>=0.27.0,<2.0.0
+
+# Optional: real LLM generation (install if GEMINI_API_KEY or OPENAI_API_KEY is configured)
+# google-genai>=1.0.0
+# openai>=1.0.0,<2.0.0
+
+# Optional: real reranking (install for production reranking quality)
+# flashrank>=2.0.0,<3.0.0
+
+# Optional: persistent vector database (install if Qdrant is available)
+# qdrant-client>=1.7.0,<2.0.0

@@ -1,0 +1,13 @@
+# ThinkZen — Vercel deployment dependencies (repo root).
+# Mirrors backend/requirements.txt (the source of truth) so Vercel's Python
+# builder installs the lightweight production stack. The default RAG path never
+# imports the optional heavy ML deps, so this stays small and serverless-safe.
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.32.0,<1.0.0
+pydantic-settings>=2.6.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+# HTTP client for the server-side Sarvam STT call (app/api/routes/stt.py).
+# Only exercised when SARVAM_API_KEY is set; required in prod for /api/v1/stt.
+httpx>=0.27.0,<2.0.0
+
+python-multipart>=0.0.9
